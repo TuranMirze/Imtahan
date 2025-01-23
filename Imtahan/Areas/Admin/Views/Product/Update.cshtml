@@ -1,0 +1,36 @@
+﻿@using Imtahan.ViewModel.Product
+@model ProductUpdateVM
+
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Product create</h6>
+    </div>
+    <div class="card-body">
+        <form enctype="multipart/form-data" method="post">
+            <div class="form-group">
+                <label asp-for="Name">Name</label>
+                <input class="form-control" asp-for="Name">
+                <span class="text-danger" asp-validation-for="Name"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Salary">Salary</label>
+                <input class="form-control" asp-for="Salary">
+                <span class="text-danger" asp-validation-for="Salary"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Color">Color</label>
+                <input class="form-control" asp-for="Color">
+                <span class="text-danger" asp-validation-for="Color"></span>
+            </div>
+
+            <span class="text-danger" asp-route-id="CategoryId"></span>
+            <div class="form-group">
+                <label asp-for="CoverFile">File</label>
+                <input class="form-control" asp-for="CoverFile">
+                <span class="text-danger" asp-validation-for="CoverFile"></span>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</div>

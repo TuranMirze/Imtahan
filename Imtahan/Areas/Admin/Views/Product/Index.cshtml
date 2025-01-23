@@ -1,0 +1,49 @@
+﻿@using Imtahan.ViewModel.Product﻿
+@model List<ProductCreateVM>;
+
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Product</h6>
+        <a class="btn btn-primary" asp-area="Admin" asp-controller="Product" asp-action="Create">Create</a>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Surname</th>
+                        <th>Department</th>
+                        <th>Photo</th>
+                        <th>Comment</th>
+                        <th>Update</th>
+                        <th>Delete</th>
+                        <th>Hide-Show</th>
+                    </tr>
+                </thead>
+                <tbody>
+@* 
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.Name</td>
+                            <td>@item.Salary</td>
+                            <td><img src="/imgs/Product/@item.CoverFile" style="width:40%; height:60px" asp-append-version=true></td>
+                            <td><a class="btn btn-success" asp-area="Admin" asp-controller="Product" asp-action="Update" asp-route-id="@item.CategoryId">Edit</a></td>
+                            <td><a class="btn btn-danger" asp-area="Admin" asp-controller="Product" asp-action="Delete" asp-route-id="@item.CategoryId">Delete</a></td>
+                            @if (item.IsDeleted == false)
+                            {
+                                <td><a class="btn btn-warning" asp-area="Admin" asp-controller="Product" asp-action="Hide" asp-route-id="@item.CategoryId">Hide</a></td>
+                            }
+                            @if (item.IsDeleted == true)
+                            {
+                                <td><a class="btn btn-warning" asp-area="Admin" asp-controller="Product" asp-action="Show" asp-route-id="@item.CategoryId">Show</a></td>
+                            }
+                        </tr>
+                    } *@
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
